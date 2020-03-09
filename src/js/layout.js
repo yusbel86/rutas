@@ -7,6 +7,8 @@ import { Demo } from "./views/demo";
 import { Prueba } from "./views/prueba";
 import { Prueba1 } from "./views/prueba1";
 import { Single } from "./views/single";
+import { Login } from "./views/login";
+
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
@@ -24,8 +26,9 @@ export const Layout = () => {
 				<ScrollToTop>
 					<Navbar />
 					<Switch>
-						<Route exact path="/" component={Home} />
+						<Route exact path="/" component={Login} />
 						<Route path="/demo" component={Demo} />
+						<Route path="/home" component={Home} />
 						<Route path="/prueba" component={Prueba} />
 						<Route path="/prueba1/:numero" component={Prueba1} />
 						<Route path="/single/:theid" component={Single} />
